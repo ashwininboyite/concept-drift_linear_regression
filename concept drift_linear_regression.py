@@ -17,6 +17,6 @@ def action(datum):
 #modelop.metrics
 def metrics(data):
     predicted_values = data.price
-    pvalue = ks_2samp(actual_values, predicted_values)
+    pvalue = ks_2samp(actual_values, predicted_values)[1]
     
     yield {"pvalue": pvalue}
